@@ -1,0 +1,33 @@
+{
+  "appId": "com.cctracker.desktop",
+  "productName": "CC Tracker",
+  "artifactName": "${name}-${version}-${os}-${arch}.${ext}",
+  "directories": { "output": "dist" },
+  "files": [
+    "main.js",
+    "preload.js",
+    "renderer.js",
+    "transaction.js",
+    "index.html",
+    "styles.css",
+    "package.json"
+  ],
+  "mac": {
+    "target": "dmg",
+    "category": "public.app-category.finance",
+    "identity": "-",
+    "notarize": false
+  },
+  "win": { "target": "nsis" },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true
+  },
+  "linux": {
+    "target": "rpm",
+    "category": "Office",
+    "maintainer": "CC Tracker contributors",
+    "vendor": "CC Tracker"
+  }
+}
